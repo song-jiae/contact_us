@@ -10,13 +10,15 @@ const SearchBox = () => {
   };
   return (
     <div className='SearchBox'>
-      <input
-        type='text'
-        id='searchBox'
-        placeholder='검색'
-        onChange={(event) => setKeyword(event.target.value)}
-      ></input>
-      <button type='submit'>Search</button>
+      <form onSubmit={searchByName}>
+        <input
+          type='text'
+          id='searchBox'
+          placeholder='검색'
+          onChange={(event) => setKeyword(event.target.value)}
+        ></input>
+        <button type='submit'>Search</button>
+      </form>
     </div>
   )
 }
